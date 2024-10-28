@@ -1,0 +1,87 @@
+/* Modal overlay styling */
+.modal-overlay {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+  }
+  
+  /* Modal content container */
+  .modal-content {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 400px;
+    width: 90%;
+    position: relative;
+    animation: fadeIn 0.3s ease;
+  }
+  
+  /* Close button styling */
+  .close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 24px;
+    color: #555;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .close-button:hover {
+    color: #f44336;
+  }
+  
+  /* Fade-in animation for modal */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .modal-header {
+  text-align: center;
+}
+
+/* Keep form elements aligned to the left */
+.modal-form label,
+.modal-form input,
+.modal-form button {
+  text-align: left;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+/* Styles for centering footer link */
+.modal-footer {
+  text-align: center;
+}
+
+.placeholder-bold::placeholder {
+    font-size: 1rem;
+    color: #333; /* Darker color */
+    opacity: 1; /* Ensure opacity is 100% for better visibility */
+  }
+  
+  /* Input field styling */
+  .input-bold {
+    font-weight: 600;
+    padding: 0.75rem 0.5rem; /* Adjust padding for a clearer look */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .button-custom {
+    background-color: #454545;
+    color: white;
+  }
+  
+  .button-custom:hover {
+    background-color: red; /* You can specify the exact shade of red if needed */
+  }
+  

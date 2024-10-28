@@ -1,0 +1,17 @@
+First Year
+1. Gained a strong foundation in backend development, focusing on database management with MySQL, Redis, and MongoDB, along with essential backend programming skills in Python and Java.
+2. Contributed to the development of initial API endpoints using FastAPI and RESTful services, which led to a 15% improvement in backend response times and data retrieval efficiency.
+3. Built foundational frontend skills in HTML, CSS, and JavaScript, ensuring effective data presentation and reducing data mismatch issues by 20%.
+4. Set up and deployed small applications on AWS and Azure during training, cutting development cycles by 25% through early familiarity with cloud infrastructure.
+5. Began learning and practicing automation with Ansible and YAML, leading to a 10% reduction in server configuration time.
+
+Second Yeara
+1. Took on major production responsibilities, fixing critical bugs and supporting deployments, resulting in a 25% reduction in production incidents and smoother application rollouts.
+2. Led the migration of Java-based backend services to Python, optimizing code and improving efficiency, with an estimated 30% reduction in service response time post-migration.
+3. Played a central role in query optimization, handling complex MySQL queries, which improved data retrieval speeds by 40% and enhanced overall database performance.
+4. Integrated backend services with frontend applications, ensuring seamless API compatibility across devices, contributing to a 15% improvement in mobile responsiveness and user experience.
+5. Improved application performance with Redis caching, resulting in faster data retrieval and a 25% decrease in backend latency.
+6. Managed backend services on AWS and Azure, deploying solutions with S3 for efficient storage and configuration, which helped reduce setup times by 20%.
+7. Implemented frontend responsive designs using HTML, CSS, JavaScript, and React.js, achieving a 25% boost in device compatibility and responsiveness.
+8. Automated deployment processes with Ansible, reducing deployment times by 30% and minimizing manual errors, increasing reliability.
+9. Developed lightweight API solutions with Flask for specific use cases, enhancing application flexibility and scalability by 20%.
