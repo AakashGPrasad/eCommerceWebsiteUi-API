@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
 import FooterPng from '../../assets/Down2.png';
 import { motion } from 'framer-motion';
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 
 // Updated SuccessModal component
 const SuccessModal = ({ isOpen, onClose }) => {

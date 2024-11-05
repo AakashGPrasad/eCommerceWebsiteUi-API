@@ -1,19 +1,27 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Hero from "./components/Hero/Hero";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";
 import Footer from "./components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 
 const App = () => {
   return (
-    <main className="overflow-x-hidden bg-white text-dark">
-      <Hero />
-      <Banner />
-      <Services />
-      <Banner2 />
-      <Footer />
-    </main>
+    <Router>
+      <Navbar /> {/* Include Navbar for navigation */}
+      <main className="overflow-x-hidden bg-white text-dark">
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="/services" element={<Services />} />
+          {/* Additional routes */}
+        </Routes>
+        <Banner />
+        <Banner2 />
+        <Footer />
+      </main>
+    </Router>
   );
 };
 

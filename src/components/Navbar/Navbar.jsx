@@ -1,7 +1,8 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
-import Modal from './Modal'; // Import the Modal component
+import { useNavigate } from "react-router-dom";
+import Modal from "./Modal"; // Make sure Modal handles both Sign In and Sign Up
 
 const NavbarMenu = [
   { id: 1, title: "Home", path: "/" },
@@ -13,8 +14,10 @@ const NavbarMenu = [
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isModalOpen, setIsModalOpen] = useState(false); // State to manage modal visibility
-  const [isSignIn, setIsSignIn] = useState(false); // State to track if Sign In is active
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSignIn, setIsSignIn] = useState(true); // Track Sign In vs Sign Up
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Track login status
+  const navigate = useNavigate();
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -25,11 +28,22 @@ const Navbar = () => {
   };
 
   const switchToSignIn = () => {
-    setIsSignIn(true); // Set to Sign In form
+    setIsSignIn(true);
   };
 
   const switchToSignUp = () => {
-    setIsSignIn(false); // Set to Sign Up form
+    setIsSignIn(false);
+  };
+
+  const handleLogin = () => {
+    setIsLoggedIn(true); // Set login state
+    setIsModalOpen(false); // Close modal after login
+    navigate("/"); // Redirect to Hero (main) page
+  };
+
+  const handleLogout = () => {
+    setIsLoggedIn(false); // Reset login state on logout
+    navigate("/"); // Redirect to the home page or any other page as needed
   };
 
   return (
@@ -54,12 +68,21 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <button
-              className="primary-btn flex items-center justify-center gap-2 group focus:outline-none focus:ring-0 focus:ring-transparent active:outline-none bg-[#454545] text-white hover:bg-red-600"
-              onClick={toggleModal} // Open modal on button click
+            {isLoggedIn ? (
+              <button
+                className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
+                onClick={handleLogout} // Logout action
               >
-              Sign Up
-            </button>
+                Log Out
+              </button>
+            ) : (
+              <button
+                className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
+                onClick={toggleModal} // Open modal for Sign In/Sign Up
+              >
+                {isSignIn ? "Sign In" : "Sign Up"}
+              </button>
+            )}
           </ul>
         </div>
         <div className="lg:hidden">
@@ -82,25 +105,35 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            <div className="flex flex-col items-center w-full">
-            <button
-              className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
-              onClick={toggleModal} // Open modal on button click
-            >
-              Sign Up
-          </button>
-            </div>
+            {/* <div className="flex flex-col items-center w-full">
+              {isLoggedIn ? (
+                <button
+                  className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
+                  onClick={handleLogout} // Logout action
+                >
+                  Log Out
+                </button>
+              ) : (
+                <button
+                  className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
+                  onClick={toggleModal} // Open modal for Sign In/Sign Up
+                >
+                  {isSignIn ? "Sign In" : "Sign Up"}
+                </button>
+              )}
+            </div> */}
           </ul>
         </div>
       )}
 
       {/* Modal for Sign In / Sign Up */}
       {isModalOpen && (
-        <Modal 
+        <Modal
           isSignIn={isSignIn}
+          toggleModal={toggleModal}
           switchToSignIn={switchToSignIn}
           switchToSignUp={switchToSignUp}
-          toggleModal={toggleModal}
+          handleLogin={handleLogin} // Trigger login action
         />
       )}
     </nav>
