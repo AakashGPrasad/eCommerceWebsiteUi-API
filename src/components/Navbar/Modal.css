@@ -85,3 +85,212 @@
     background-color: red; /* You can specify the exact shade of red if needed */
   }
   
+  .animated-logo {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black; /* Base color */
+    background: linear-gradient(
+      90deg,
+      black,
+      red,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -moz-background-clip: text; /* For older versions of Firefox */
+    -o-background-clip: text; /* Fallback for Opera */
+    -ms-background-clip: text; /* Fallback for older IE (if supported) */
+    -webkit-text-fill-color: transparent; /* Necessary for webkit-based browsers */
+    animation: slide-gradient 3s linear infinite;
+  }
+  
+  @keyframes slide-gradient {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+
+  .animated-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black; /* Base color */
+    background: linear-gradient(
+      90deg,
+      black,
+      #ff6666,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -moz-background-clip: text; /* For older versions of Firefox */
+    -o-background-clip: text; /* Fallback for Opera */
+    -ms-background-clip: text; /* Fallback for older IE (if supported) */
+    -webkit-text-fill-color: transparent; /* Necessary for webkit-based browsers */
+    animation: slide-gradient 3s linear infinite;
+  }
+
+  .animated-text2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black; /* Base color */
+    background: linear-gradient(
+      90deg,
+      black,
+      red,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -moz-background-clip: text; /* For older versions of Firefox */
+    -o-background-clip: text; /* Fallback for Opera */
+    -ms-background-clip: text; /* Fallback for older IE (if supported) */
+    -webkit-text-fill-color: transparent; /* Necessary for webkit-based browsers */
+    animation: slide-gradient 3s linear infinite;
+  }
+  
+  @keyframes slide-gradient {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+
+
+  .button-text {
+    font-weight: bold;
+    background: linear-gradient(
+      90deg,
+      black, 
+      #ffd700,
+      black 
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -webkit-text-fill-color: transparent; /* Transparent text */
+    animation: slide-gradient-black-gold 3s linear infinite; /* Continuous animation */
+  }
+  
+  @keyframes slide-gradient-black-gold {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+  
+  @keyframes slideColor {
+    0% {
+      color: black;
+    }
+    50% {
+      color: red;
+    }
+    100% {
+      color: black;
+    }
+  }
+  
+  .sliding-text2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(
+      90deg,
+      black,
+      red,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -moz-background-clip: text; /* For older versions of Firefox */
+    -o-background-clip: text; /* Fallback for Opera */
+    -ms-background-clip: text; /* Fallback for older IE (if supported) */
+    -webkit-text-fill-color: transparent; /* Necessary for webkit-based browsers */
+    animation: slide-gradient 3s linear infinite;
+  }
+
+  .sliding-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: black;
+    background: linear-gradient(
+      90deg,
+      black,
+      #ff6666,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text; /* For Safari and Chrome */
+    -moz-background-clip: text; /* For older versions of Firefox */
+    -o-background-clip: text; /* Fallback for Opera */
+    -ms-background-clip: text; /* Fallback for older IE (if supported) */
+    -webkit-text-fill-color: transparent; /* Necessary for webkit-based browsers */
+    animation: slide-gradient 3s linear infinite;
+  }
+  
+  
+  @keyframes slideColors {
+    0% {
+      color: #ff6347; 
+    }
+    25% {
+      color: #ff4500; 
+    }
+    50% {
+      color: #32cd32;
+    }
+    75% {
+      color: #1e90ff;
+    }
+    100% {
+      color: #ff6347;
+    }
+  }
+  
+  .sliding-colors {
+    background: linear-gradient(
+      90deg,
+      black,
+      #ff6666,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide-gradient 3s linear infinite;
+  }
+
+  .sliding-colors2 {
+    background: linear-gradient(
+      90deg,
+      black,
+      red,
+      black
+    );
+    background-size: 200%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -o-background-clip: text;
+    -ms-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: slide-gradient 3s linear infinite;
+  }
+  

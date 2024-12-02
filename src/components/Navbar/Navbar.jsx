@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
-import { useNavigate } from "react-router-dom";
-import Modal from "./Modal"; // Make sure Modal handles both Sign In and Sign Up
+import { Link, useNavigate } from "react-router-dom";
+import Modal from "./Modal"; // Ensure Modal handles both Sign In and Sign Up
 
 const NavbarMenu = [
   { id: 1, title: "Home", path: "/" },
   { id: 2, title: "Overview", path: "#Overview" },
-  { id: 3, title: "Services", path: "#Service" },
   { id: 4, title: "About", path: "#About" },
   { id: 5, title: "Contact Us", path: "#getInTouch" },
 ];
@@ -46,23 +45,42 @@ const Navbar = () => {
     navigate("/"); // Redirect to the home page or any other page as needed
   };
 
+  const handleLogoClick = (e) => {
+    e.preventDefault(); // Prevent default link behavior
+    if (window.location.pathname === "/") {
+      // If already on the Home route, scroll to top
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+      navigate("/"); // Navigate to the Home route
+    }
+  };
+
   return (
-    <nav className="relative z-20">
+    <nav className="relative z-20 bg-white shadow-md w-full">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}
         className="container py-10 flex justify-between items-center"
       >
+        {/* Logo or Title */}
         <div>
-          <h1 className="font-bold text-4xl">IAS Darshana</h1>
+          <Link to="/" onClick={handleLogoClick}>
+          <h1
+            className="font-bold text-4xl cursor-pointer animated-logo"
+            style={{ display: "inline-block", position: "relative" }}
+          >
+            IAS Darshana
+          </h1>
+          </Link>
         </div>
+        {/* Desktop Menu */}
         <div className="hidden lg:block">
           <ul className="flex items-center gap-3">
             {NavbarMenu.map((menu) => (
               <li key={menu.id}>
                 <a
                   href={menu.path}
-                  className="inline-block py-2 px-3 hover:text-red-600 relative group"
+                  className="inline-block py-2 px-3 hover:text-red-600 relative group sliding-colors2"
                 >
                   {menu.title}
                 </a>
@@ -85,6 +103,7 @@ const Navbar = () => {
             )}
           </ul>
         </div>
+        {/* Mobile Menu Icon */}
         <div className="lg:hidden">
           <IoMdMenu className="text-4xl" onClick={toggleMobileMenu} />
         </div>
@@ -105,23 +124,6 @@ const Navbar = () => {
                 </a>
               </li>
             ))}
-            {/* <div className="flex flex-col items-center w-full">
-              {isLoggedIn ? (
-                <button
-                  className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
-                  onClick={handleLogout} // Logout action
-                >
-                  Log Out
-                </button>
-              ) : (
-                <button
-                  className="primary-btn flex items-center justify-center gap-2 group focus:outline-none bg-[#454545] text-white hover:bg-red-600"
-                  onClick={toggleModal} // Open modal for Sign In/Sign Up
-                >
-                  {isSignIn ? "Sign In" : "Sign Up"}
-                </button>
-              )}
-            </div> */}
           </ul>
         </div>
       )}
@@ -133,7 +135,7 @@ const Navbar = () => {
           toggleModal={toggleModal}
           switchToSignIn={switchToSignIn}
           switchToSignUp={switchToSignUp}
-          handleLogin={handleLogin} // Trigger login action
+          handleLogin={handleLogin}
         />
       )}
     </nav>

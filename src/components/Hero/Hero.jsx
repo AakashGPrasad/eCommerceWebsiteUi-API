@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "../Navbar/Navbar";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import HeroPng from "../../assets/hero.png";
-import { animate, motion } from "framer-motion";
+import HeroPng from "../../assets/Image_3.png";
+import { motion } from "framer-motion";
 
 export const FadeUp = (delay) => {
   return {
@@ -31,15 +31,17 @@ const Hero = () => {
       <div className="container grid grid-cols-1 md:grid-cols-2 min-h-[600px] pb-20 md:pb-0">
         {/* Brand Info */}
         <div className="flex flex-col justify-center py-14 md:py-0 relative z-10">
-          <div className="text-center md:text-left space-y-10 lg:max-w-[400px]">
+          <div className="text-center md:text-left space-y-10 lg:max-w-[500px] px-4 md:px-0">
             <motion.h1
               variants={FadeUp(0.6)}
               initial="initial"
               animate="animate"
-              className="text-3xl lg:text-5xl font-bold !leading-snug"
+              className="text-2xl sm:text-3xl lg:text-4xl font-medium leading-loose animated-text"
+              style={{ lineHeight: "3.5rem" }}
             >
-              Hi this is for{" "}
-              <span className="text-secondary">Students</span> to Learn about competitive Exams
+              Welcome to IAS Darshana, <br />
+              your trusted partner for <br />
+              UPSC and KPSC Exam preparation.
             </motion.h1>
             <motion.div
               variants={FadeUp(0.8)}
@@ -47,13 +49,20 @@ const Hero = () => {
               animate="animate"
               className="flex justify-center md:justify-start"
             >
-              <button
-                className="primary-btn flex items-center gap-2 group focus:outline-none active:outline-none bg-[#454545] text-white hover:bg-red-600"
-                style={{ outline: 'none', boxShadow: 'none' }}
+              <a
+                href="https://www.youtube.com/@darshangarthikere"
+                className="no-underline"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Get Started
-                <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
-              </button>
+                <button
+                  className="primary-btn flex items-center gap-2 group focus:outline-none active:outline-none bg-[#454545] text-white hover:bg-red-600"
+                  style={{ outline: "none", boxShadow: "none" }}
+                >
+                  <span className="button-text">Know Us Better</span>
+                  <IoIosArrowRoundForward className="text-xl group-hover:translate-x-2 group-hover:-rotate-45 duration-300" />
+                </button>
+              </a>
             </motion.div>
           </div>
         </div>
@@ -65,7 +74,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.4, ease: "easeInOut" }}
             src={HeroPng}
             alt="Hero"
-            className="w-[400px] xl:w-[600px] relative z-10 drop-shadow"
+            className="w-[300px] sm:w-[400px] md:w-[600px] xl:w-[600px] relative z-10 drop-shadow"
           />
         </div>
       </div>
