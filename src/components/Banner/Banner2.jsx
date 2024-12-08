@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import BannerPng from "../../assets/bannerImage.png";
+import BannerPng from "../../../src/assets/bannerImage.png";
 import { motion } from "framer-motion";
 
 const Banner2 = () => {

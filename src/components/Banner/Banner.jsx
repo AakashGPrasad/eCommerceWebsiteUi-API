@@ -1,9 +1,9 @@
 import React from "react";
-import BannerPng from "../../assets/IasLogo.png";
+import BannerPng from "../../../src/assets/IasLogo.png";
 import { GrUserExpert } from "react-icons/gr";
 import { MdOutlineAccessTime } from "react-icons/md";
 import { FaBookReader } from "react-icons/fa";
-import { FadeUp } from "../Hero/Hero";
+import { FadeUp } from "../../../src/components/Hero/Hero.jsx";
 import { motion } from "framer-motion";
 
 const Banner = () => {

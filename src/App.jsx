@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Hero from "./components/Hero/Hero";
+import Hero from "../src/components/Hero/Hero.jsx";
 import Services from "./components/Services/Services";
 import Banner from "./components/Banner/Banner";
 import Banner2 from "./components/Banner/Banner2";

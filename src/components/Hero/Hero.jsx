@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "../Navbar/Navbar";
+import Navbar from "../../../src/components/Navbar/Navbar.jsx";
 import { IoIosArrowRoundForward } from "react-icons/io";
-import HeroPng from "../../assets/Image_3.png";
+import HeroPng from "../../../src/assets/Image_3.png";
 import { motion } from "framer-motion";
 
 export const FadeUp = (delay) => {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Modal.css';
+import '../../../src/components/Navbar/Modal.css';
 
 const Modal = ({ isSignIn, switchToSignIn, switchToSignUp, toggleModal }) => {
   const [email, setEmail] = useState('');

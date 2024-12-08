@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaInstagram, FaWhatsapp, FaYoutube } from 'react-icons/fa';
-import FooterPng from '../../assets/Down2.png';
+import FooterPng from '../../../src/assets/Down2.png';
 import { motion } from 'framer-motion';
 import emailjs from "emailjs-com";
 import { Link } from 'react-router-dom'; // Import Link for routing

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IoMdMenu } from "react-icons/io";
 import { motion } from "framer-motion";
 import { Link, useNavigate } from "react-router-dom";
-import Modal from "./Modal"; // Ensure Modal handles both Sign In and Sign Up
+import Modal from "../../../src/components/Navbar/Modal.jsx";
 
 const NavbarMenu = [
   { id: 1, title: "Home", path: "/" },
